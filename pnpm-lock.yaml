@@ -44,6 +44,12 @@ importers:
       express:
         specifier: ^4.18.2
         version: 4.21.2
+      ngx-cookie-service-ssr:
+        specifier: ^19.1.0
+        version: 19.1.0(@angular/common@19.1.6(@angular/core@19.1.6(rxjs@7.8.1)(zone.js@0.15.0))(rxjs@7.8.1))(@angular/core@19.1.6(rxjs@7.8.1)(zone.js@0.15.0))(@angular/ssr@19.1.7(63d62672e91cb79b25ab56a14eb9de42))
+      pnpm:
+        specifier: ^10.4.0
+        version: 10.4.0
       postcss:
         specifier: ^8.5.2
         version: 8.5.2
@@ -3319,6 +3325,13 @@ packages:
   neo-async@2.6.2:
     resolution: {integrity: sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==}
 
+  ngx-cookie-service-ssr@19.1.0:
+    resolution: {integrity: sha512-2aFJrf5XCK/wUsv4Z/XCuXE8FNSKA1KX9A1Fw/hh4wtbZk+i/mxirh7ir6UiKiodbMIAtfSayPq2xYbFFr8XIw==}
+    peerDependencies:
+      '@angular/common': ^19.0.0
+      '@angular/core': ^19.0.0
+      '@angular/ssr': ^19.0.0
+
   node-addon-api@6.1.0:
     resolution: {integrity: sha512-+eawOlIgy680F0kBzPUNFhMZGtJ1YmqM6l4+Crf4IkImjYrO/mqPwRMh352g23uIaQKFItcQ64I7KMaJxHgAVA==}
 
@@ -3530,6 +3543,11 @@ packages:
   pkg-dir@7.0.0:
     resolution: {integrity: sha512-Ie9z/WINcxxLp27BKOCHGde4ITq9UklYKDzVo1nhk5sqGEXU3FpkwP5GM2voTGJkGd9B3Otl+Q4uwSOeSUtOBA==}
     engines: {node: '>=14.16'}
+
+  pnpm@10.4.0:
+    resolution: {integrity: sha512-a4SdB4fZf49OHwOpuP+PA4554VPW8RrlOa58Q1/555bfaoYsmRUCaVx/no+siur8GsWo2rR+NhSNGDgy2IbdUg==}
+    engines: {node: '>=18.12'}
+    hasBin: true
 
   postcss-loader@8.1.1:
     resolution: {integrity: sha512-0IeqyAsG6tYiDRCYKQJLAmgQr47DX6N7sFSWvQxt6AcupX8DIdmykuk/o/tx0Lze3ErGHJEp5OSRxrelC6+NdQ==}
@@ -7857,6 +7875,13 @@ snapshots:
 
   neo-async@2.6.2: {}
 
+  ngx-cookie-service-ssr@19.1.0(@angular/common@19.1.6(@angular/core@19.1.6(rxjs@7.8.1)(zone.js@0.15.0))(rxjs@7.8.1))(@angular/core@19.1.6(rxjs@7.8.1)(zone.js@0.15.0))(@angular/ssr@19.1.7(63d62672e91cb79b25ab56a14eb9de42)):
+    dependencies:
+      '@angular/common': 19.1.6(@angular/core@19.1.6(rxjs@7.8.1)(zone.js@0.15.0))(rxjs@7.8.1)
+      '@angular/core': 19.1.6(rxjs@7.8.1)(zone.js@0.15.0)
+      '@angular/ssr': 19.1.7(63d62672e91cb79b25ab56a14eb9de42)
+      tslib: 2.8.1
+
   node-addon-api@6.1.0:
     optional: true
 
@@ -8095,6 +8120,8 @@ snapshots:
   pkg-dir@7.0.0:
     dependencies:
       find-up: 6.3.0
+
+  pnpm@10.4.0: {}
 
   postcss-loader@8.1.1(postcss@8.4.49)(typescript@5.7.3)(webpack@5.97.1(esbuild@0.24.2)):
     dependencies:
