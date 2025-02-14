@@ -4,5 +4,5 @@ Angular 19+ application with SSR architecture and integration of the Ngx Transla
 
 ## Recommended options for i18n work
 
-- Option 1: [ngx translate](https://github.com/ngx-translate/core)
-- Option 2: [angular i18n](https://angular.dev/guide/i18n)
+- Option 1 (SPA/Dynamic Applications): [ngx translate](https://github.com/ngx-translate/core)
+- Option 2 (SSR/SSG Applications): [angular i18n](https://angular.dev/guide/i18n)
