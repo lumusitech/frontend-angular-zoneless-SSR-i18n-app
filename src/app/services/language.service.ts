@@ -23,7 +23,5 @@ export class LanguageService {
     this.translate.use(lang);
 
     this.currentLang.set(lang);
-
-    //TODO: change language
   }
 }
