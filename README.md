@@ -18,3 +18,43 @@ Angular 19+ application with SSR architecture and integration of the Ngx Transla
 To use it, you need to install the http-loader package from @ngx-translate:
 
 `pnpm install @ngx-translate/http-loader`
+
+## App config
+
+After applying the recommended configuration, the `app.config.ts` file should look like this:
+
+```typescript
+import { ApplicationConfig, importProvidersFrom } from "@angular/core";
+import { provideHttpClient, withFetch } from "@angular/common/http";
+import { provideZoneChangeDetection } from "@angular/platform-browser";
+import { provideRouter } from "@angular/router"; // Make sure this is imported
+import { provideClientHydration, withEventReplay } from "@angular/platform-browser";
+import { TranslateModule, TranslateHttpLoader } from "@ngx-translate/core"; // Import necessary modules
+import { HttpClient } from "@angular/common/http"; // Import HttpClient
+import { routes } from "./app-routing.module"; // Import your routes (adjust path if needed)
+import { SsrCookieService } from "./ssr-cookie.service"; // Import your cookie service (adjust path if needed)
+
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
+
+export const appConfig: ApplicationConfig = {
+  providers: [
+    provideHttpClient(withFetch()),
+    provideZoneChangeDetection({ eventCoalescing: true }),
+    provideRouter(routes),
+    provideClientHydration(withEventReplay()),
+
+    importProvidersFrom(
+      TranslateModule.forRoot({
+        loader: {
+          provide: TranslateHttpLoader, // Provide the loader, not HttpClient
+          useFactory: HttpLoaderFactory,
+          deps: [HttpClient],
+        },
+      })
+    ),
+    SsrCookieService, // No need for extra comment if the import is clear
+  ],
+};
+```
