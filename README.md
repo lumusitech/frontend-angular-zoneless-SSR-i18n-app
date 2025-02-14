@@ -163,7 +163,7 @@ Ensure that the translation files (e.g., en.json, es.json, fr.json, it.json) hav
 
 ![translation-files](https://github.com/lumusitech/frontend-angular-zoneless-SSR-i18n-app/blob/main/public/assets/img/translation-files-structure.png)
 
-Employ the required properties in each JSON file as translation keys.
+Employ the required properties in each JSON file as translation keys. Example: `es.json`
 
 ```json
 {
