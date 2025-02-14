@@ -9,4 +9,8 @@ export const routes: Routes = [
     path: 'basic-plan',
     loadComponent: () => import('./pages/basic-plan/basic-plan.component'),
   },
+  {
+    path: '**',
+    redirectTo: 'products',
+  },
 ];

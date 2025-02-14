@@ -3,6 +3,7 @@ import { CommonEngine, isMainModule } from '@angular/ssr/node';
 import express from 'express';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { SERVER_LANG_TOKEN } from './app/services/language.service';
 import bootstrap from './main.server';
 
 const serverDistFolder = dirname(fileURLToPath(import.meta.url));
@@ -41,6 +42,14 @@ app.get(
 app.get('**', (req, res, next) => {
   const { protocol, originalUrl, baseUrl, headers } = req;
 
+  console.log('Hello from server');
+  const cookies = headers.cookie ?? '';
+
+  const langCookie =
+    cookies.split(';').find((cookie) => cookie.includes('lang')) ?? 'lang=en';
+
+  const [, lang] = langCookie.split('='); //'lang=en'.split --> ['lang', 'en']
+
   commonEngine
     .render({
       bootstrap,
@@ -51,6 +60,7 @@ app.get('**', (req, res, next) => {
         { provide: APP_BASE_HREF, useValue: baseUrl },
         { provide: 'REQUEST', useValue: req },
         { provide: 'RESPONSE', useValue: res },
+        { provide: SERVER_LANG_TOKEN, useValue: lang },
       ],
     })
     .then((html) => res.send(html))
