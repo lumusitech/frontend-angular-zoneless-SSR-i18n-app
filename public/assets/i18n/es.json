@@ -10,21 +10,25 @@
       "perMonth": "por mes",
       "join": "Unirse",
       "online-ordering": "Pedidos en línea",
-      "limited-support": "Soporte limitado"
+      "limited-support": "Soporte limitado",
+      "extended-support": "Soporte 24/7",
+      "extra-support1": "Acceso especial a eventos",
+      "extra-support2": "Consulta con un chef personal"
     },
     "basic": {
       "name": "Plan Básico",
-      "price": 9.99,
-      "description": "Descripción del plan básico"
+      "price": "9.99",
+      "description": "Descripción del plan básico",
+      "button": "Productos"
     },
     "pro": {
       "name": "Plan Pro",
-      "price": 20,
+      "price": "20",
       "description": "Descripción del plan pro"
     },
     "enterprise": {
       "name": "Plan Empresarial",
-      "price": 30,
+      "price": "30",
       "description": "Descripción del plan empresarial"
     }
   }

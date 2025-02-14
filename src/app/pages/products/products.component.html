@@ -8,15 +8,21 @@
     class="relative bg-clip-border text-gray-700 flex h-full min-h-[314px] w-full flex-col items-center justify-center rounded-xl !bg-gray-900 px-8"
   >
     <div class="container mx-auto text-center">
+      <!-- Recommended way of translation with Pipe -->
       <h2
         class="block antialiased tracking-normal font-sans text-4xl font-semibold leading-[1.3] text-white mb-4"
       >
-        Pricing
+        {{ "pricingPage.title" | translate }}
       </h2>
+      <!-- Other way of translation. Add translate attribute -->
+      <p
+        class="block antialiased font-sans text-xl font-normal leading-relaxed text-white mb-8 opacity-70"
+        [translate]="'pricingPage.description'"
+      ></p>
       <p
         class="block antialiased font-sans text-xl font-normal leading-relaxed text-white mb-8 opacity-70"
       >
-        Choose the perfect plan for your dining experience
+        {{ "welcomeMessage" | translate : { firstName: fullName() } }}
       </p>
     </div>
   </div>
@@ -29,14 +35,14 @@
           <h5
             class="antialiased tracking-normal font-sans text-xl font-semibold leading-snug text-green-500 flex justify-center mt-2 mb-2"
           >
-            Basic Plan
+            {{ "plans.basic.name" | translate }}
           </h5>
           <h3
             class="antialiased tracking-normal font-sans text-3xl font-semibold leading-snug text-blue-gray-900 flex justify-center mt-5 mb-2"
           >
             $9.99<span
               class="block antialiased tracking-normal font-sans text-xl font-semibold leading-snug text-blue-gray-900 self-end -translate-y-1"
-              >/per month</span
+              >/{{ "plans.texts.perMonth" | translate }}</span
             >
           </h3>
           <ul
@@ -62,7 +68,7 @@
                 <p
                   class="block antialiased font-sans text-base leading-relaxed font-normal text-inherit"
                 >
-                  Online ordering
+                  {{ "plans.texts.online-ordering" | translate }}
                 </p>
               </li>
               <li class="flex items-center gap-2 py-1 text-gray-700">
@@ -84,7 +90,7 @@
                 <p
                   class="block antialiased font-sans text-base leading-relaxed font-normal text-inherit"
                 >
-                  Limited support
+                  {{ "plans.texts.limited-support" | translate }}
                 </p>
               </li>
             </div>
@@ -94,7 +100,7 @@
             type="button"
             routerLink="/basic-plan"
           >
-            Basic Plan
+            {{ "plans.texts.join" | translate }}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -120,14 +126,15 @@
           <h5
             class="antialiased tracking-normal font-sans text-xl font-semibold leading-snug text-green-500 flex justify-center mt-2 mb-2"
           >
-            Premium Plan
+            {{ "plans.pro.name" | translate }}
           </h5>
           <h3
             class="antialiased tracking-normal font-sans text-3xl font-semibold leading-snug text-blue-gray-900 flex justify-center mt-5 mb-2"
           >
-            $19.99<span
+            ${{ "plans.pro.price" | translate }}
+            <span
               class="block antialiased tracking-normal font-sans text-xl font-semibold leading-snug text-blue-gray-900 self-end -translate-y-1"
-              >/per month</span
+              >/{{ "plans.texts.perMonth" | translate }}</span
             >
           </h3>
           <ul
@@ -153,7 +160,7 @@
                 <p
                   class="block antialiased font-sans text-base leading-relaxed font-normal text-inherit"
                 >
-                  Online ordering
+                  {{ "plans.texts.online-ordering" | translate }}
                 </p>
               </li>
               <li class="flex items-center gap-2 py-1 text-gray-700">
@@ -175,7 +182,7 @@
                 <p
                   class="block antialiased font-sans text-base leading-relaxed font-normal text-inherit"
                 >
-                  24/7 support
+                  {{ "plans.texts.extended-support" | translate }}
                 </p>
               </li>
               <li class="flex items-center gap-2 py-1 text-gray-700">
@@ -197,7 +204,7 @@
                 <p
                   class="block antialiased font-sans text-base leading-relaxed font-normal text-inherit"
                 >
-                  Special events access
+                  {{ "plans.texts.extra-support1" | translate }}
                 </p>
               </li>
             </div>
@@ -206,7 +213,7 @@
             class="align-middle select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 px-6 rounded-lg bg-gray-900 text-white shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none w-full flex items-center justify-center gap-4"
             type="button"
           >
-            join
+            {{ "plans.texts.join" | translate }}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -232,14 +239,15 @@
           <h5
             class="antialiased tracking-normal font-sans text-xl font-semibold leading-snug text-green-500 flex justify-center mt-2 mb-2"
           >
-            Ultimate Plan
+            {{ "plans.enterprise.name" | translate }}
           </h5>
           <h3
             class="antialiased tracking-normal font-sans text-3xl font-semibold leading-snug text-blue-gray-900 flex justify-center mt-5 mb-2"
           >
-            $29.99<span
+            ${{ "plans.enterprise.price" | translate
+            }}<span
               class="block antialiased tracking-normal font-sans text-xl font-semibold leading-snug text-blue-gray-900 self-end -translate-y-1"
-              >/per month</span
+              >/{{ "plans.texts.perMonth" | translate }}</span
             >
           </h3>
           <ul
@@ -265,7 +273,7 @@
                 <p
                   class="block antialiased font-sans text-base leading-relaxed font-normal text-inherit"
                 >
-                  Online ordering
+                  {{ "plans.texts.online-ordering" | translate }}
                 </p>
               </li>
               <li class="flex items-center gap-2 py-1 text-gray-700">
@@ -287,7 +295,7 @@
                 <p
                   class="block antialiased font-sans text-base leading-relaxed font-normal text-inherit"
                 >
-                  24/7 support
+                  {{ "plans.texts.extended-support" | translate }}
                 </p>
               </li>
               <li class="flex items-center gap-2 py-1 text-gray-700">
@@ -309,7 +317,7 @@
                 <p
                   class="block antialiased font-sans text-base leading-relaxed font-normal text-inherit"
                 >
-                  Special events access
+                  {{ "plans.texts.extra-support1" | translate }}
                 </p>
               </li>
               <li class="flex items-center gap-2 py-1 text-gray-700">
@@ -331,7 +339,7 @@
                 <p
                   class="block antialiased font-sans text-base leading-relaxed font-normal text-inherit"
                 >
-                  Personal chef consultation
+                  {{ "plans.texts.extra-support2" | translate }}
                 </p>
               </li>
             </div>
@@ -340,7 +348,7 @@
             class="align-middle select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 px-6 rounded-lg bg-gray-900 text-white shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none w-full flex items-center justify-center gap-4"
             type="button"
           >
-            join
+            {{ "plans.texts.join" | translate }}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"

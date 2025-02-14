@@ -1,9 +1,10 @@
 import { Component, inject, signal } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 import { LanguageService } from '../../services/language.service';
 
 @Component({
   selector: 'app-language-selector',
-  imports: [],
+  imports: [TranslateModule],
   templateUrl: './language-selector.component.html',
   styles: ``,
 })

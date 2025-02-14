@@ -10,21 +10,25 @@
       "perMonth": "al mese",
       "join": "Iscriviti",
       "online-ordering": "Ordini online",
-      "limited-support": "Supporto limitato"
+      "limited-support": "Supporto limitato",
+      "extended-support": "Supporto 24 ore su 24, 7 giorni su 7",
+      "extra-support1": "Accesso speciale agli eventi",
+      "extra-support2": "Consulenza con uno chef personale"
     },
     "basic": {
       "name": "Piano Base",
-      "price": 9.99,
-      "description": "Descrizione del piano base"
+      "price": "9.99",
+      "description": "Descrizione del piano base",
+      "button": "Prodotti"
     },
     "pro": {
       "name": "Piano Pro",
-      "price": 20,
+      "price": "20",
       "description": "Descrizione del piano pro"
     },
     "enterprise": {
       "name": "Piano Aziendale",
-      "price": 30,
+      "price": "30",
       "description": "Descrizione del piano aziendale"
     }
   }

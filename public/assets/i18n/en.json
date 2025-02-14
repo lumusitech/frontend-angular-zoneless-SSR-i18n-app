@@ -10,18 +10,25 @@
       "perMonth": "per month",
       "join": "Join",
       "online-ordering": "Online Ordering",
-      "limited-support": "Limited Support"
+      "limited-support": "Limited Support",
+      "extended-support": "24/7 support",
+      "extra-support1": "Special access to events",
+      "extra-support2": "Personal chef consultation"
     },
     "basic": {
       "name": "Basic Plan",
-      "description": "Basic plan description"
+      "price": "9.99",
+      "description": "Basic plan description",
+      "button": "Products"
     },
     "pro": {
       "name": "Pro Plan",
+      "price": "20",
       "description": "Pro plan description"
     },
     "enterprise": {
       "name": "Enterprise Plan",
+      "price": "30",
       "description": "Enterprise plan description"
     }
   }

@@ -10,21 +10,25 @@
       "perMonth": "par mois",
       "join": "Rejoindre",
       "online-ordering": "Commandes en ligne",
-      "limited-support": "Support limité"
+      "limited-support": "Support limité",
+      "extended-support": "Support 24h/24 et 7j/7",
+      "extra-support1": "Accès spécial aux événements",
+      "extra-support2": "Consultation avec un chef personnel"
     },
     "basic": {
       "name": "Plan de Base",
-      "price": 9.99,
-      "description": "Description du plan de base"
+      "price": "9.99",
+      "description": "Description du plan de base",
+      "button": "Produits"
     },
     "pro": {
       "name": "Plan Pro",
-      "price": 20,
+      "price": "20",
       "description": "Description du plan pro"
     },
     "enterprise": {
       "name": "Plan Entreprise",
-      "price": 30,
+      "price": "30",
       "description": "Description du plan entreprise"
     }
   }
