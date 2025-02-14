@@ -161,7 +161,7 @@ export class AppComponent {
 
 Ensure that the translation files (e.g., en.json, es.json, fr.json, it.json) have been loaded beforehand.
 
-![translation-files](/assets/img/translation-files-structure.png)
+![translation-files](https://github.com/lumusitech/frontend-angular-zoneless-SSR-i18n-app/blob/main/public/assets/img/translation-files-structure.png)
 
 Employ the required properties in each JSON file as translation keys.
 
